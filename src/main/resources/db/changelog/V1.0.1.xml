@@ -11,4 +11,25 @@
         </rollback>
     </changeSet>
 
+    <changeSet id="1" author="simonova">
+        <sqlFile path="1.0.1/sql/01__create_subscriber_table.sql" relativeToChangelogFile="true"/>
+        <rollback>
+            <sqlFile path="1.0.1/sql/rollback/01__create_subscriber_table_rollback.sql" relativeToChangelogFile="true"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="2" author="simonova">
+        <sqlFile path="1.0.1/sql/02__create_tariff_table.sql" relativeToChangelogFile="true"/>
+        <rollback>
+            <sqlFile path="1.0.1/sql/rollback/02__create_tariff_table_rollback.sql" relativeToChangelogFile="true"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="3" author="simonova">
+        <sqlFile path="1.0.1/sql/03__create_payments_table.sql" relativeToChangelogFile="true"/>
+        <rollback>
+            <sqlFile path="1.0.1/sql/rollback/03__create_payments_table_rollback.sql" relativeToChangelogFile="true"/>
+        </rollback>
+    </changeSet>
+
 </databaseChangeLog>
